@@ -404,3 +404,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Private data
+data_private/
+
+# Pretrained models
+src/models/
