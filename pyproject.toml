@@ -1,0 +1,41 @@
+[project]
+name = "m2vp2"
+version = "0.1.0"
+description = "Multi-modal variant pathogenicity predictor"
+authors = [
+  { name = "Jonathan De Smedt", email = "jonathandesmedt92@gmail.com" }
+]
+license = "Apache2.0"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy",
+  "pandas",
+  "biopython"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "flake8",
+  "black",
+  "mypy"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.flake8]
+max-line-length = 88
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.pytest.ini_options]
+addopts = "--tb=short -q"
+testpaths = [
+  "tests"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
